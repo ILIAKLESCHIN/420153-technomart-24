@@ -5,45 +5,53 @@
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
 </head>
-<header>
-  <nav class="top-menu">
-    <ul class="top-menu-navigation">
-      <li>TЕХНОМАРТ</li>
-      <li>
-        <form action="search.php" method="get">
-          <p>
-            <label id="searclabel">Поиск:
-              <input type="text" name="search" id="search">
-            </label>
-          </p>
-        </form>
-      </li>
-      <li><a href="bookmarks.html">Закладки</a></li>
-      <li><a href="order.html">Оформить заказ</a></li>
-    </ul>
-  </nav>
-  <p class="techmomart-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-  <img src="img/imdex-phone-icon.svg">
-  <p class="phone-number">+7 (812) 555-05-55</p>
-  <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-  <ul class="registration">
-    <li>Войти</li>
-    <li>Регистрация</li>
-  </ul>
-  <nav class="menu">
-    <ul class="site-navigation">
-      <li class="main-page">Главная</li>
-      <li><a href="company.html">Компания</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="news.html">Новости</a></li>
-      <li><a href="specialoffers.html">Спецпредложения</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-  </nav>
-</header>
 
-<body>
+<body style="background-color: lightblue">
+  <header>
+    <nav class="top-menu">
+      <ul class="top-menu-navigation">
+        <li><img src="img/logo-technomart.svg" alt="Техномарт"></li>
+        <li>
+          <form action="search.php" method="get">
+            <p>
+              <img src="img/icon-search.svg" alt="Поиск">
+              <label id="searclabel">Поиск:
+                <input type="text" name="search" id="search">
+              </label>
+            </p>
+          </form>
+        </li>
+        <li>
+          <img src="img/icon-bookmark.svg" alt="Закладка">
+          <a href="bookmarks.html">Закладки</a></li>
+        <li>
+          <img src="img/icon-cart.svg" alt="Корзина">
+          <a href="cart.html">Корзина</a></li>
+        <li><a href="order.html">Оформить заказ</a></li>
+      </ul>
+    </nav>
+    <p class="techmomart-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+
+    <p class="phone-number"><img src="img/icon-phone.svg" alt="Телефон">+7 (812) 555-05-55</p>
+    <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+    <ul class="registration">
+      <li><img src="img/icon-login.svg" alt="Войти">Войти</li>
+      <li>Регистрация</li>
+    </ul>
+    <nav class="menu">
+      <ul class="site-navigation">
+        <li class="main-page">Главная</li>
+        <li><a href="company.html">Компания</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="specialoffers.html">Спецпредложения</a></li>
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
   <main class="container">
     <section class="offers">
       <h2 class="visually-hidden">ПРЕДЛОЖЕНИЯ</h2>
@@ -75,7 +83,7 @@
     </section>
     <section class="poplular">
       <h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
-      <a href="all-popolar">Все популярные товары</a>
+      <a href="all-popular">Все популярные товары</a>
       <ul class="popular-list">
         <li>
           <p>Перфоратор BOSCH</p>
@@ -189,7 +197,7 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами,
         заехав в наш офис:</p>
-      <!---Здесь должна быть карта-->
+      <img src="img/map.jpg">
       <div class="contacts-popup">
         <p>Заблудились? НАПИШИТЕ НАМ!</p>
         <!--Здесь должно быть всплывающее окно формы-->
@@ -199,7 +207,7 @@
 
   <footer class="main-footer">
     <section class="footer-top">
-      <h1>ТЕХНОМАРТ</h1>
+      <img src="img/logo-technomart.svg">
       <nav class="bottom-menu">
         <ul class="site-navigation">
           <li class="main-page">Главная</li>
@@ -223,9 +231,9 @@
       <p>Все права защищены</p>
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#"><img src="img/icon-vk.svg" alt="ВКонтакте"></a></li>
+          <li><a class="social-button" href="#"><img src="img/icon-fb.svg" alt="Facebook"></a></li>
+          <li><a class="social-button" href="#"><img src="img/icon-insta.svg" alt="Instagram"></a></li>
         </ul>
       </div>
       <p>Обратная связь</p>
