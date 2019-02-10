@@ -15,7 +15,7 @@
           <form action="search.php" method="get">
             <p>
               <img src="img/icon-search.svg" alt="Поиск">
-              <label id="searclabel">Поиск:
+              <label for="search">Поиск:
                 <input type="text" name="search" id="search">
               </label>
             </p>
@@ -30,13 +30,25 @@
         <li><a href="order.html">Оформить заказ</a></li>
       </ul>
     </nav>
-    <p class="techmomart-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+    <h1 class="techmomart-description">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
     <p class="phone-number"><img src="img/icon-phone.svg" alt="Телефон">+7 (812) 555-05-55</p>
     <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
     <ul class="registration">
-      <li><img src="img/icon-login.svg" alt="Войти">Войти</li>
-      <li>Регистрация</li>
+      <li>
+        <button class="login-button">
+          <a class="login-link" href="login.html">
+            <img src="img/icon-login.svg" alt="Войти">
+            Вход
+        </button>
+      </li>
+
+      <li>
+        <button class="registration-button"><a class="registration-link">Регистрация</a></button>
+      </li>
+
+
+
     </ul>
     <nav class="menu">
       <ul class="site-navigation">
@@ -197,11 +209,37 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами,
         заехав в наш офис:</p>
-      <img src="img/map.jpg">
+      <img src="img/map.jpg" alt="Карта" width="300" height="158">
+      <p>
+        <img src="img/bigmap.jpg" width="940" height="446.2" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+
+      </p>
+      <button class="modal-close" type="button"><img src="img\closecross.svg" alt="Закрыть карту">
+        Закрыть
+      </button>
+</section>
+<section class="contacts-popup">
       <div class="contacts-popup">
         <p>Заблудились? НАПИШИТЕ НАМ!</p>
-        <!--Здесь должно быть всплывающее окно формы-->
       </div>
+      
+      <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+        <p><label for="yourname">Ваше имя</label>
+          <br>
+          <input type="text" name="name" id="yourname" placeholder="Имя Фамилия">
+        </p>
+        <p><label for="email">Ваш e-mail</label>
+          <br>
+          <input type="email" name="email" id="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="letter-content">Текст письма</label>
+          <br>
+          <textarea name="letter" id="letter-content" rows="6" placeholder="В свободной форме">
+</textarea>
+        </p>
+        <button type="submit" value="Отправить"></button>
+      </form>
     </section>
   </main>
 

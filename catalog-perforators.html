@@ -17,7 +17,7 @@
             <form action="search.php" method="get">
               <p>
                 <img src="img/icon-search.svg" alt="Поиск">
-                <label id="searclabel">Поиск:
+                <label for="search">Поиск:
                   <input type="text" name="search" id="search">
                 </label>
               </p>
@@ -61,9 +61,68 @@
         <li><a href="catalog.html">Магазин</a></li>
         <li class="breadcrumbs-current">Средства для ухода</li>
       </ul>
+<section class="product-cartaddition">
+  <p>Товар добавлен в коризну!</p>
+  <button class="orderform">
+    <a href="orderform.html">Оформить заказ</a>
+  </button>
+  <button class="close-window">
+    <a href="catalog-perforators.html">Продолжить покупки</a>
+  </button>
+  <br>
+  <button class="modal-close" type="button"><img src="img\closecross.svg" alt="Закрыть окно">
+    Закрыть
+  </button>
+</section>
+
+
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="bosch-filter" checked>
+                <label for="bosch-filter">Bosch</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="interskol-filter">
+                <label for="interskol-filter">ИНТЕРСКОЛ</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="makita-filter" checked>
+                <label for="makita-filter">MAKITA</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="dewalt-filter">
+                <label for="dewalt-filter">DEWALT</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="hitachi-filter">
+                <label for="hitachi-filter">HITACHI</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="battery" id="battery-filter" checked>
+                <label for="battery-filter">Аккумуляторные</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="mains" id="mains-filter">
+                <label for="mains-filter">Сетевые</label>
+              </li>
+             
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">
+            Показать
+          </button>
+        </form>
       </section>
       <section class="catalog-perforators">
         <h1>ПЕРФОРАТОРЫ</h1>
