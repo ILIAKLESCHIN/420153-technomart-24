@@ -23,7 +23,6 @@ img {
   width: 100%;
   min-height: 320px;
   background-color: rgb(244, 247, 249);
-  margin-bottom: 60px;
 }
 
 /*стилизация флекса под первую строчку*/
@@ -128,6 +127,10 @@ img {
 
 .top-menu-cart {
   position: relative;
+}
+
+.catalog-cart {
+  background-color: rgb(238, 54, 67)
 }
 
 .top-menu-cart::before {
@@ -420,6 +423,7 @@ input#search:focus~label::before {
   width: 940px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 60px;
 }
 
 .offers {
@@ -588,7 +592,6 @@ input#search:focus~label::before {
 .modal-map {
   top: 50%;
   left: 50%;
-
   width: 940px;
   height: 446px;
   margin-top: -223px;
@@ -596,7 +599,6 @@ input#search:focus~label::before {
   z-index: 30;
   display: none;
 }
-
 
 .modal-close {
   position: absolute;
@@ -696,30 +698,26 @@ input#search:focus~label::before {
   text-transform: uppercase;
 }
 
-.contacts-popup-btn {
-  width: 300px;
-  height: 38px;
-  background-color: rgb(238, 54, 67);
-}
 
-.contacts-popup-btn:hover {
+.write-letter:hover {
   background-color: rgb(202, 44, 55);
 }
 
-.contacts-popup-btn:active {
+.write-letter:active {
   background-color: rgb(186, 39, 50);
 }
 
-.contacts-popup-btn p {
+.write-letter {
+  display: block;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
+  font-weight: 400;
   line-height: 1.29;
-  letter-spacing: normal;
   text-align: center;
   color: rgb(255, 255, 255);
+  width: 300px;
+  height: 38px;
+  background-color: rgb(238, 54, 67);
 }
 
 /*футер*/
@@ -923,13 +921,11 @@ input#search:focus~label::before {
   display: none;
 }
 
-.form {
+.bottom-form {
   display: flex;
   flex-direction: column;
   width: 620px;
   height: 425px;
-  margin-left: 10px;
-  margin-bottom: 30px;
   border-top: 7px solid rgb(238, 54, 67);
   position: relative;
 }
@@ -1011,6 +1007,7 @@ input#search:focus~label::before {
   display: block;
   height: 111px;
   background-color: rgb(244, 244, 244);
+  width: 100%;
 }
 
 .letter-button {
@@ -1241,11 +1238,15 @@ input#search:focus~label::before {
   width: 620px;
   height: 275px;
   flex-direction: column;
-  position: relative;
   border-top: 7px solid rgb(238, 54, 67);
   flex-wrap: nowrap;
   justify-content: space-between;
-  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+  top: 50%;
+  left: 50%;
+  margin-left: -310px;
+  margin-top: -137px;
+  z-index: 30;
+  display: none;
 }
 
 .form-close {
@@ -1690,4 +1691,53 @@ input#search:focus~label::before {
 
 .pop-ms-item:active img {
   opacity: 0.3;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/*анимация*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
