@@ -698,7 +698,6 @@ input#search:focus~label::before {
   text-transform: uppercase;
 }
 
-
 .write-letter:hover {
   background-color: rgb(202, 44, 55);
 }
@@ -1697,6 +1696,7 @@ input#search:focus~label::before {
   display: block;
   animation: bounce 0.6s;
 }
+
 .modal-error {
   animation: shake 0.6s;
 }
@@ -1707,37 +1707,177 @@ input#search:focus~label::before {
   0% {
     transform: translateY(-2000px);
   }
-
   70% {
     transform: translateY(30px);
   }
-
   90% {
     transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0);
   }
 }
+
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(0);
   }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
+  10%, 30%, 50%, 70%, 90% {
     transform: translateX(-10px);
   }
-
-  20%,
-  40%,
-  60%,
-  80% {
+  20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
+}
+
+/*слайдер*/
+
+.slider {
+  position: relative;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 33px;
+  z-index: 100;
+  width: 50px;
+  height: 10px;
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.slider-controls label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
+
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 22px;
+  width: 620px;
+  height: 266px;
+  box-sizing: border-box;
+  position: relative;
+}
+.slider-item::before
+{
+  position: absolute;
+  content: "";
+  top: 113px;
+  right: 20px;
+  width: 22px;
+  height: 40px;
+  background: url("../img/icon-right.svg") no-repeat;
+}
+.slider-item::after
+{
+  position: absolute;
+  content: "";
+  top: 113px;
+  left: 20px;
+  width: 22px;
+  height: 40px;
+  background: url("../img/icon-left.svg") no-repeat;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/neighboursjoy.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/manstoys.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  display: block;
+  }
+
+#product-1:checked~.slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked~.slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-1:checked~.slider-controls .slider-controls-item--1::before, #product-2:checked~.slider-controls .slider-controls-item--2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  background-color: rgb(238, 54, 67);
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  font-family: "Cuprum", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.slider-item p {
+  margin: 0;
+  margin-bottom: 120px;
+  color: rgb(255, 255, 255);
+}
+
+.button {
+  display: block;
+  width: 195px;
+  height: 38px;
+  padding: 13px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(238, 54, 67);
+  border-radius: 3px;
+}
+
+.button:hover, .button:focus {
+  background-color: rgb(202, 44, 55);
+}
+
+.button:active {
+  background-color: rgb(186, 39, 50);
 }

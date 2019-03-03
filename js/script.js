@@ -20,16 +20,16 @@ try {
 }
 
 link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-
-  if (storage) {
-    name.value = storage;
-    password.focus();
-  } else {
-    name.focus();
-  }
-});
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    
+    if (storage) {
+      name.value = storage;
+      email.focus();
+    } else {
+      name.focus();
+    }
+  });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -39,7 +39,7 @@ close.addEventListener("click", function (evt) {
 
 
 form.addEventListener("submit", function (evt) {
-  if (!name.value || !password.value) {
+  if (!name.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
@@ -78,10 +78,11 @@ mapClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains("modal-show")) {
-      mapPopup.classList.remove("modal-show");
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      }
     }
-  }
-});
+  });
