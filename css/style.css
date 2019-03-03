@@ -1321,6 +1321,7 @@ input#search:focus~label::before {
 }
 
 .make-order-btn {
+  display: block;
   width: 220px;
   height: 38px;
   background-color: rgb(238, 54, 67);
@@ -1338,6 +1339,7 @@ input#search:focus~label::before {
 }
 
 .close-btn {
+  display: block;
   width: 220px;
   height: 38px;
   background-color: rgb(255, 255, 255);
