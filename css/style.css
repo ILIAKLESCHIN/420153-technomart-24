@@ -276,9 +276,12 @@ input#search:focus~label::before {
 
 .top-menu-navigation .top-menu-make-order {
   background-color: rgb(99, 166, 62);
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 110px;
+    padding: 0;
+    padding-top: 11px;
+    padding-right: 20px;
+    width: 150px;
+    height: 42px;
+    box-sizing: border-box;
 }
 
 .top-menu-navigation .top-menu-make-order:hover {
@@ -420,15 +423,16 @@ input#search:focus~label::before {
 /*выгодные предложения*/
 
 .container {
-  width: 940px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   margin-top: 60px;
 }
 
 .offers {
   display: flex;
   margin-bottom: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
 }
 
 .offer-items {
@@ -634,6 +638,9 @@ input#search:focus~label::before {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 86px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
 }
 
 .company-info {
@@ -652,7 +659,10 @@ input#search:focus~label::before {
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
 }
 
 .company-info p, .contacts p {
@@ -660,53 +670,47 @@ input#search:focus~label::before {
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
+.company-info p:last-of-type {
+  margin-top: 23px;
+}
+
+.contacts p {
+  margin-bottom: 30px;
 }
 
 .company-info ul {
+  margin-top: 24px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  margin-left: 35px;
+  margin-bottom: 36px;
 }
 
-.company-link {
-  width: 220px;
-  height: 38px;
+.company-info li {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.company-info li:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  left: -35px;
+  top: 6px;
+  background: rgb(238, 54, 67);
+}
+
+.contacts-button {
   background-color: rgb(238, 54, 67);
-}
-
-.company-link:hover {
-  background-color: rgb(202, 44, 55);
-}
-
-.company-link:active {
-  background-color: rgb(186, 39, 50);
-}
-
-.company-link a {
-  font-family: Cuprum;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.29;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-}
-
-.write-letter:hover {
-  background-color: rgb(202, 44, 55);
-}
-
-.write-letter:active {
-  background-color: rgb(186, 39, 50);
-}
-
-.write-letter {
   display: block;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -714,9 +718,34 @@ input#search:focus~label::before {
   line-height: 1.29;
   text-align: center;
   color: rgb(255, 255, 255);
+  padding-top: 11px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.contacts-button-map
+{
+  display: block;
+  cursor: pointer;
+  margin-bottom: 33px;
+}
+
+.company-link {
+  width: 220px;
+  height: 38px;
+}
+
+.contacts-button:hover {
+  background-color: rgb(202, 44, 55);
+}
+
+.contacts-button:active {
+  background-color: rgb(186, 39, 50);
+}
+
+.write-letter {
   width: 300px;
   height: 38px;
-  background-color: rgb(238, 54, 67);
 }
 
 /*футер*/
@@ -1620,6 +1649,8 @@ input#search:focus~label::before {
   box-sizing: border-box;
   background-color: rgb(245, 245, 240);
   margin-bottom: 19px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title h2 {
@@ -1665,6 +1696,8 @@ input#search:focus~label::before {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pop-ms-item {
@@ -1771,7 +1804,6 @@ input#search:focus~label::before {
   background: rgb(255, 255, 255);
 }
 
-
 .slider-list {
   margin: 0;
   padding: 0;
@@ -1786,8 +1818,8 @@ input#search:focus~label::before {
   box-sizing: border-box;
   position: relative;
 }
-.slider-item::before
-{
+
+.slider-item::before {
   position: absolute;
   content: "";
   top: 113px;
@@ -1796,8 +1828,8 @@ input#search:focus~label::before {
   height: 40px;
   background: url("../img/icon-right.svg") no-repeat;
 }
-.slider-item::after
-{
+
+.slider-item::after {
   position: absolute;
   content: "";
   top: 113px;
@@ -1811,15 +1843,15 @@ input#search:focus~label::before {
   background-image: url("../img/neighboursjoy.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0;
-  
+  display: block;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/manstoys.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0;
-  display: block;
-  }
+  
+}
 
 #product-1:checked~.slider-list .slider-item:nth-child(1) {
   display: block;
@@ -1880,4 +1912,174 @@ input#search:focus~label::before {
 
 .button:active {
   background-color: rgb(186, 39, 50);
+}
+
+/*слайдер сервисов*/
+
+.services {
+  width: 100%;
+  background-color: rgb(244, 247, 249);
+  min-height: 522px;
+  margin-top: 65px;
+}
+
+.services-container {
+  width: 940px;
+  min-height: 522px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 63px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+
+.services-top h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.services-container p {
+  font-family: "PT sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+
+.services-top p {
+  width: 398px;
+}
+
+.services-list {
+  display: flex;
+  width: 240px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.services-list button {
+  display: block;
+  width: 240px;
+  height: 61px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 21px;
+  line-height: 30px;
+  background: rgb(50, 66, 92);
+  color: rgb(255, 255, 255);
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0px 1px 0 0 rgb(41, 52, 73), inset 0px 1px 0 0 rgb(64, 80, 105);
+}
+
+.services-list button:hover {
+  background: rgb(41, 52, 73);
+  box-shadow: 0px 1px 0 0 rgb(41, 52, 73), inset 0px 1px 0 0 rgb(64, 80, 105);
+}
+
+.services-list button:active, .services-list .active {
+  background: rgb(255, 255, 255);
+  color: rgb(50, 66, 92);
+  box-shadow: 0px 1px 0 0 rgb(255, 255, 255), inset 0.6px 0.8px 0 0 rgb(255, 255, 255);
+}
+
+.services-flex-container {
+  display: flex;
+  width: 100%;
+}
+
+.toggle-item {
+  margin-left: 80px;
+  margin-top: 70px;
+  position: relative;
+}
+
+.toggle-item h3 {
+  padding: 0;
+  margin: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: rgb(50, 66, 92);
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+
+/*переключение состояний слайдера*/
+
+.warranty-item {
+  position: relative;
+  display: none;
+  width: 379px;
+}
+
+.warranty-item::before {
+  content: "";
+  position: absolute;
+  width: 389px;
+  height: 283px;
+  top: 0px;
+  right: -249px;
+  background: url(../img/warranty.png) no-repeat;
+}
+
+.credit-item {
+  position: relative;
+  display: none;
+  width: 279px;
+}
+
+.credit-item p {
+  margin-bottom: 27px
+}
+
+.credit-btn {
+  display: block;
+  background-color: rgb(255, 83, 87);
+  width: 195px;
+  height: 38px;
+  text-align: center;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 18px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.credit-item::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  top: 0px;
+  right: -353px;
+  background: url(../img/credit.png) no-repeat;
+}
+
+.delivery-item {
+  display: block;
+  width: 275px;
+  position: relative;
+}
+
+.delivery-item::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  top: 21px;
+  right: -343px;
+  background: url(../img/delivery-car.png) no-repeat;
 }

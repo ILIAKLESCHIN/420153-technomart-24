@@ -107,34 +107,34 @@
             <a href="#">На все случаи</a>
           </div>
           <section class="slider">
-              <div class="slider-container">
-                      <h2 class="visually-hidden">Преимущества</h2>
-                      <input class="visually-hidden" type="radio" id="product-1" name="toggle" >
-                      <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
-                      
-                      <div class="slider-controls">
-                        <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
-                        <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
-                      </div>
-                  
-      
-                  </div>
-                  <ul class="slider-list">
-                      <li class="slider-item">
-                          <h3>Перфораторы</h3>
-                          <p>Настоящие мужские игрушки</p>
-                          <a class="slider-item-button button" href="catalog-perforators.html">ОТКРЫТЬ КАТАЛОГ</a>
-                      </li>
-                      <li class="slider-item">
-                          <h3>ДРЕЛИ</h3>
-                          <p>Cоседям на радость!</p>
-                          <a class="slider-item-button button" href="catalog-perforators.html">ОТКРЫТЬ КАТАЛОГ</a>
-                      </li>
-                      
-                  </ul>
-                 </section> 
+            <div class="slider-container">
+              <h2 class="visually-hidden">Преимущества</h2>
+              <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+              <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
+
+              <div class="slider-controls">
+                <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+                <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
               </div>
-          
+
+
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a class="slider-item-button button" href="catalog-perforators.html">ОТКРЫТЬ КАТАЛОГ</a>
+              </li>
+              <li class="slider-item">
+                <h3>ДРЕЛИ</h3>
+                <p>Cоседям на радость!</p>
+                <a class="slider-item-button button" href="catalog-perforators.html">ОТКРЫТЬ КАТАЛОГ</a>
+              </li>
+
+            </ul>
+          </section>
+        </div>
+
 
         <div class="second-column">
           <div class="offer-card engineering">
@@ -254,53 +254,78 @@
 
     </section>
     <section class="services">
-      <h2>Сервисы</h2>
+      <div class="services-container">
+        <div class="services-top">
+          <h2>Сервисы</h2>
 
-      <p>Хороший интернет-магазин отличается от плохого не только ценами!
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      <ul class="services-list">
-        <li>Доставка</li>
-        <li>Гарантия</li>
-        <li>Кредит</li>
-        <!--Здесь должны быть картинки и текст меняющиеся при наведении-->
-      </ul>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
-      <h2>Доставка</h2>
-      <p>Мы с удовольствием доставим ваш товар прямо
-        к вашему подъезду совершенно бесплатно!
-        Ведь мы неплохо заработаем,
-        поднимая его на ваш этаж!</p>
+        </div>
+        <div class="services-flex-container">
+          <div class="services-list">
+            <button class="active">Доставка</button>
+            <button>Гарантия</button>
+            <button>Кредит</button>
+          </div>
 
+          <div class="toggle-item delivery-item">
 
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!</p>
+          </div>
+
+          <div class="toggle-item warranty-item">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей
+              гарантии. Мы
+              обменяем сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.</p>
+          </div>
+
+          <div class="toggle-item credit-item">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.
+            </p>
+            <a class="credit-btn" href="#">Отправить заявку</a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!--Часть для отработки по 5 лекции по CSS-->
+
     <div class="bottom-flex-container">
       <section class="company-info">
         <h2>Компания "Техномарт"</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
           равнодушными любителей сэкономить на гастарбайтерах.</p>
 
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:</p>
 
         <ul class="deliver-partners">
-          <li><img src="img/red-dash.jpg" width="25" height="2" alt="Черта">Деловые линии</li>
-          <li><img src="img/red-dash.jpg" width="25" height="2" alt="Черта">Автотрейдинг</li>
-          <li><img src="img/red-dash.jpg" width="25" height="2" alt="Черта">ЖелДорЭкспедиция</li>
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
-        <div class="company-link">
-          <a href="#">Подробнее о компании</a>
-        </div>
+        
+          <a class="contacts-button company-link" href="#">Подробнее о компании</a>
+        
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами,
+        <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <a class="contacts-button-map"><img src="img/map.jpg" alt="Карта" width="300" height="158"></a>
 
 
-        <a class="write-letter" href="#">Заблудились? НАПИШИТЕ НАМ!</a>
+        <a class="contacts-button write-letter" href="#">Заблудились? НАПИШИТЕ НАМ!</a>
 
       </section>
     </div>
