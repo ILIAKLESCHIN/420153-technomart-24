@@ -14,18 +14,13 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-
-
 <body>
   <header class="main-header">
     <div class="global-first-line">
       <div class="first-line-container">
-        <div class="logo-background-box-top">
-          <a href="index.html">
-            <img class="technomart-logo" src="img/logo-technomart.svg" alt="Техномарт">
-          </a>
-        </div>
-
+          <a href="index.html" class="logo-background-box-top"></a>
+    
+        
         <nav class="top-menu">
           <ul class="top-menu-navigation">
             <li>
@@ -116,6 +111,24 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <h3>Фильтр:</h3>
+          <fieldset class="filter-item">
+            <legend>Цена:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 10%;
+                    width: 70%;"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price"> <input name="min-price" type="text" value="0"></label>
+                <label class="max-price"> <input name="max-price" type="text" value="30000"></label>
+              </div>
+            </div>
+          </fieldset>
           <fieldset>
             <legend>Производители:</legend>
             <ul>
@@ -169,6 +182,16 @@
       </section>
 
       <section class="catalog-perforators">
+        <div class="filter-line-container">
+          <h3>Сортировка</h3>
+          <ul class="filter-line">
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По функционалу</a></li>
+            <li><a class="visually-hidden-filter" href="#">Вверх</a></li>
+            <li><a class="visually-hidden-filter" href="#">Вниз</a></li>
+          </ul>
+        </div>
 
         <div class="catalog-items">
           <div class="catalog-item">
@@ -279,40 +302,42 @@
       </section>
     </div>
     <ul class="pagination-list">
-      <li class="pagination-item-current"><a>1</a></li>
+      <li class="pagination-item pagination-current"><a>1</a></li>
       <li class="pagination-item"><a href="#">2</a></li>
       <li class="pagination-item"><a href="#">3</a></li>
-      <li class="pagination-item"><a href="#">Следующая страница</a></li>
+      <li class="pagination-item"><a href="#">Следующая</a></li>
     </ul>
-    
-    <section class="modal product-addcard">
+
+    <section class="modal modal-card product-addcard">
       <div class="card-text">
         <img class="card-text-check-box" src="img/big-check-icon.svg" alt="Добавлен в корзину">
         <span>Товар добавлен в коризну!</span>
       </div>
       <div class="card-buttons">
-        
-          <a class="make-order-btn" href="#">Оформить заказ</a>
-        
-        
-          <a class="close-btn" href="#">Продолжить покупки</a>
-        
+
+        <a class="make-order-btn" href="#">Оформить заказ</a>
+
+
+        <a class="close-btn" href="#">Продолжить покупки</a>
+
 
         <button class="modal-close" type="button"><img src="img/closecross.svg" alt="Закрыть окно">
           Закрыть
         </button>
       </div>
     </section>
-    
+
     <section class="item-description">
+      <div class="bottom-line-container">
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
       <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
         кирпиче, бетоне и камне.
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+        <br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
         дрели,
         шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
         совмещены отбойный молоток и ударная дрель.
       </p>
+    </div>
 
     </section>
   </main>
@@ -320,11 +345,9 @@
   <footer class="main-footer">
     <section class="footer-top">
       <div class="footer-flex-container-1">
-        <div class="logo-background-box-bottom">
-          <a href="index.html">
-            <img class="technomart-logo" src="img/logo-technomart.svg" alt="Техномарт">
-          </a>
-        </div>
+        <a class="logo-background-box-bottom" href="index.html">
+        </a>
+        
         <nav class="bottom-menu">
           <ul class="site-navigation">
             <li class="main-page">Главная</li>
@@ -359,10 +382,10 @@
         </ul>
 
         <div class="feedback">
-          <p>Обратная связь
+          <p>Обратная связь:
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p>Разработано
-            <a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
+          <p>Разработано -
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </section>
